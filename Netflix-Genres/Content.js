@@ -3,15 +3,6 @@ const github = "https://raw.githubusercontent.com/dannyb500/Extensions/refs/head
 
 let list = []
 
-fetch(github)
-    .then(response => response.json())
-    .then(data => {
-        list = data;
-        displayGenres(document.getElementById("container"));
-    });
-
-console.log(list);
-
 
 
 function openLink(genre_id) {
@@ -68,5 +59,10 @@ function displayGenres(container) {
 }
 
 
-
-displayGenres(document.getElementById("container"));
+fetch(github)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.list);
+        list = data.list;
+        displayGenres(document.getElementById("container"));
+    });
