@@ -1,7 +1,18 @@
 const src = "https://www.netflix.com/browse/genre/"
-const github = "https://raw.githubusercontent.com/dannyb500/Extensions/refs/heads/main/Netflix-Genres/List.js"
-console.log(github);
+const github = "https://raw.githubusercontent.com/dannyb500/Extensions/refs/heads/main/Netflix-Genres/List.json"
+
 let list = []
+
+fetch(github)
+    .then(response => response.json())
+    .then(data => {
+        list = data;
+        displayGenres(document.getElementById("container"));
+    });
+
+console.log(list);
+
+
 
 function openLink(genre_id) {
     window.open(src + genre_id);
