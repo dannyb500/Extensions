@@ -1,0 +1,111 @@
+html,
+body {
+    font-family: 'Geist Sans', system-ui, -apple-system, sans-serif;
+    color: #ffffff;
+    background: #121212;
+    padding: 12px;
+    margin: 0;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html {
+    border: 1px solid #333;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.sub-body {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sub-body {
+    position: relative;
+    margin: 2px 0px 0px 0px;
+    background: #1f1f1f;
+    color: #efefef;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+
+    border: 1px solid #333;
+    border-radius: 15px;
+    pointer-events: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.genre-container {
+    position: relative;
+    margin: 10px 0px 0px 0px;
+    background: #1f1f1f;
+    color: #efefef;
+
+    padding: 5px 10px;
+
+    border: 1px solid #333;
+    border-radius: 15px;
+    min-width: 220px;
+
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.genre-text {
+    all: unset;
+    background-color: transparent;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+
+    height: 95%;
+    width: 85%;
+}
+
+.dropdown-button {
+    all: unset;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+    flex: auto;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    pointer-events: auto;
+
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.dropdown-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.genre-container:has(.genre-text:hover) {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #fff;
+    transform: scale(0.95);
+}
+
+.genre-container:has(.genre-text:active) {
+    background: #333;
+    transform: scale(0.95);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

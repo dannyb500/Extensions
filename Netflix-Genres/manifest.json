@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Netflix Genres",
+    "version": "1.0.0",
+    "description": "",
+    "permissions": [
+        "activeTab"
+    ],
+    "icons": {
+        "16": "/Netflix_Logo.png",
+        "48": "/Netflix_Logo.png",
+        "128": "/Netflix_Logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.netlix.com/*"
+            ],
+            "js": [
+                "Content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
